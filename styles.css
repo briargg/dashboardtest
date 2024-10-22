@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Barra superior (Header) */
+header .top-bar {
+    background: linear-gradient(90deg, #32a852, #58e877);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header .user-actions {
+    display: flex;
+    align-items: center;
+}
+
+header .notifications {
+    margin-right: 20px;
+    position: relative;
+}
+
+header .notifications i {
+    margin-left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+header .logout-btn {
+    background-color: #ffffff;
+    color: #32a852;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+header .logout-btn:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+header .logout-btn i {
+    margin-left: 10px;
+}
+
+.header .user-actions i {
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    flex: 1;
+    background-color: #f4f7f6;
+}
+
+/* Sidebar (Menú lateral) */
+.sidebar {
+    width: 220px;
+    background-color: #2e2e2e;
+    padding: 30px 0;
+    color: white;
+    transition: width 0.4s ease;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: #ddd;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #58e877;
+    color: #2e2e2e;
+}
+
+/* Iconos modernos en el sidebar */
+.sidebar ul li a i {
+    font-size: 22px;
+}
+
+/* Contenido dinámico */
+.content-section {
+    display: none;
+    padding: 40px;
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-section h1 {
+    font-size: 32px;
+    color: #32a852;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.content-section p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Transición de Sidebar para hacerlo interactivo */
+.sidebar:hover {
+    width: 250px;
+}
+
+.sidebar:hover ul li a {
+    padding: 15px 40px;
+}
+
+/* Transiciones para elementos del menú y el contenido */
+.sidebar ul li a,
+header .top-bar {
+    transition: all 0.4s ease;
+}
+
+/* Estilos para la sección de Órdenes de Trabajo */
+.content-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.orders-table th, .orders-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.orders-table thead {
+    background-color: #32a852;
+    color: white;
+    font-weight: bold;
+}
+
+.orders-table td .pdf-link {
+    color: #32a852;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.orders-table td .pdf-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el título */
+.content-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
